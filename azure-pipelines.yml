@@ -1,0 +1,28 @@
+#Run and build gerald77/rsync-server-docker
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  imageName: 'gerald77/rsync-server-docker'
+  dockerHub: 'gerald77'
+
+steps:
+- task: Docker@2
+  displayName: Build rsync-server-docker
+  inputs:
+    repository: $(imageName)
+    command: build
+    Dockerfile: Dockerfile
+    tags: latest
+- task: Docker@2
+  displayName: Push rsync-server-docker
+  inputs:
+    containerRegistry: |
+      $(dockerHub)
+    repository: $(imageName)
+    command: push
+    tags: latest
