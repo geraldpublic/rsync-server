@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C.UTF-8
 ENV NOTVISIBLE "in users profile"
 
-LABEL version="2025-10-05"
+LABEL version="2025-11-20"
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends openssh-server rsync && \
