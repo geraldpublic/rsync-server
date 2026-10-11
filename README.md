@@ -1,5 +1,3 @@
-# THIS PROJECT IS UNMAINTAINED AND ARCHIVED. USE AT YOUR OWN RISK.
-
 # rsync-server
 
 A `rsyncd`/`sshd` server in Docker. You know, for moving files.

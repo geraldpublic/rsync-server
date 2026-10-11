@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim
+FROM debian:trixie-slim
 LABEL org.opencontainers.image.authors="Kyle Wilcox <kyle@axds.co>" \
       org.opencontainers.image.url="https://github.com/axiom-data-science/rsync-server"
 ENV DEBIAN_FRONTEND noninteractive
